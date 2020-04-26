@@ -10,20 +10,28 @@
         android:layout_height="30dp"
         android:id="@+id/magnitude"
         android:text="strength"
-        android:layout_weight="33.3"/>
+        android:layout_weight="25.0"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:id="@+id/location"
         android:text="name"
-        android:layout_weight="33.3"/>
+        android:layout_weight="25.0"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:id="@+id/date"
-        android:text="date"
-        android:layout_weight="33.3"/>
+        android:text="6 Mar, 2010"
+        android:layout_weight="25.0"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/time"
+        android:text="3:00 PM"
+        android:layout_weight="25.0"/>
+
 
 </LinearLayout>

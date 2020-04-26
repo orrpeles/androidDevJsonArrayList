@@ -13,7 +13,9 @@ import androidx.annotation.Nullable;
 
 import org.w3c.dom.Text;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class earthquakeAdapter extends ArrayAdapter <quake> {
@@ -33,14 +35,36 @@ public class earthquakeAdapter extends ArrayAdapter <quake> {
         }
 
         TextView magnitude = convertView.findViewById(R.id.magnitude);
-        TextView location = convertView.findViewById(R.id.location);
-        TextView date = convertView.findViewById(R.id.date);
-
         magnitude.setText(qke.getMagnitude());
+
+        TextView location = convertView.findViewById(R.id.location);
         location.setText(qke.getLocation());
-        date.setText(qke.getDate());
+
+
+        // create a new data object from time in milliseconds of the quake
+        Date dateObject = new Date(qke.getTimeInMilliseconds());
+        //find the textview
+        TextView dateInMilliseconds = convertView.findViewById(R.id.date);
+        String formattedDate = formatDate(dateObject);
+        dateInMilliseconds.setText(formattedDate);
+
+        // find TV with time
+        TextView timeView = convertView.findViewById(R.id.time);
+        String formattedTime = formatTime(dateObject);
+        timeView.setText(formattedTime);
+
 
         return convertView;
 
+    }
+
+    private String formatTime(Date dateObject) {
+        SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a");
+        return timeFormat.format(dateObject);
+    }
+
+    private String formatDate(Date dateObject) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("LLL dd, yyyy");
+        return dateFormat.format(dateObject);
     }
 }

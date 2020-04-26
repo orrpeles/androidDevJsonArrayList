@@ -53,7 +53,7 @@ public final class QueryUtils {
                 // get properties for JSONObject
                 String magnitueID = properties.getString("mag");
                 String locationID = properties.getString("place");
-                String dateID = properties.getString("time");
+                long dateID = properties.getLong("time");
                 // append params to earthquakes arraylist
                 earthquakes.add(new quake(magnitueID, locationID, dateID));
 

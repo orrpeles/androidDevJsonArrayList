@@ -3,12 +3,12 @@ package com.example.customadapter4;
 public class quake {
     private String magnitude;
     private String location;
-    private String date;
+    private long timeInMilliseconds;
 
-    public quake(String magnitude, String location, String date) {
+    public quake(String magnitude, String location, long timeInMilliseconds) {
         this.magnitude = magnitude;
         this.location = location;
-        this.date = date;
+        this.timeInMilliseconds = timeInMilliseconds;
     }
 
     public String getMagnitude() {
@@ -19,7 +19,7 @@ public class quake {
         return location;
     }
 
-    public String getDate() {
-        return date;
+    public long getTimeInMilliseconds() {
+        return timeInMilliseconds;
     }
 }
