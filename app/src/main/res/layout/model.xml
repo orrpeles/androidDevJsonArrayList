@@ -2,36 +2,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:weightSum="100">
+    android:orientation="horizontal">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="match_parent"
         android:id="@+id/magnitude"
         android:text="strength"
-        android:layout_weight="25.0"/>
+        android:layout_weight="1"/>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:id="@+id/location"
-        android:text="name"
-        android:layout_weight="25.0"/>
+        android:layout_height="match_parent"
+        android:id="@+id/locationOffset"
+        android:text="75 miles NW of"
+        android:layout_weight="1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/locationPrimary"
+        android:text="Tokyo, Japan"
+        android:layout_weight="1"/>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="match_parent"
         android:id="@+id/date"
         android:text="6 Mar, 2010"
-        android:layout_weight="25.0"/>
+        android:layout_weight="1"/>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="match_parent"
         android:id="@+id/time"
         android:text="3:00 PM"
-        android:layout_weight="25.0"/>
+        android:layout_weight="1"/>
 
 
 </LinearLayout>
